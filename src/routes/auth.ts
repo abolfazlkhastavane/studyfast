@@ -14,7 +14,18 @@ authRoutes.post("/login", async (c) => {
   const password = String(body.password || "");
   if (!password) return c.json({ ok: false, error: "رمز عبور را وارد کنید" }, 400);
 
-  const valid = await verifyPassword(password, c.env.ADMIN_PASSWORD_HASH || "");
+  if (!c.env.ADMIN_PASSWORD_HASH) {
+    return c.json(
+      {
+        ok: false,
+        error:
+          "رمز عبور در ورکر کلادفلر تنظیم نشده است. لطفاً سکرت ADMIN_PASSWORD را در گیت‌هاب تنظیم و اکشن دیپلوی را مجدداً اجرا کنید.",
+      },
+      500,
+    );
+  }
+
+  const valid = await verifyPassword(password, c.env.ADMIN_PASSWORD_HASH);
   if (!valid) return c.json({ ok: false, error: "رمز عبور اشتباه است" }, 401);
 
   const maxAgeHours = parseInt(c.env.SESSION_MAX_AGE_HOURS || "168", 10);

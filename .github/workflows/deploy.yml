@@ -18,6 +18,19 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      - name: Seed Worker Secrets
+        env:
+          GITHUB_TOKEN: ${{ secrets.DATA_REPO_TOKEN }}
+          GITHUB_REPO: ${{ secrets.DATA_REPO }}
+          GITHUB_BRANCH: ${{ secrets.DATA_REPO_BRANCH }}
+          ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD }}
+          CF_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CF_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+          CF_WORKER_NAME: ${{ secrets.CF_WORKER_NAME }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CF_ACCOUNT_ID }}
+        run: node scripts/seed-secrets.mjs
+
       - name: Deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CF_API_TOKEN }}

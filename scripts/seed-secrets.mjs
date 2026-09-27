@@ -46,8 +46,16 @@ async function main() {
   const githubRepo = requireEnv("GITHUB_REPO");
   const githubBranch = process.env.GITHUB_BRANCH || "main";
   const adminPassword = requireEnv("ADMIN_PASSWORD");
-  const cfApiToken = requireEnv("CF_API_TOKEN");
-  const cfAccountId = requireEnv("CF_ACCOUNT_ID");
+  const cfApiToken = process.env.CF_API_TOKEN || process.env.CLOUDFLARE_API_TOKEN;
+  if (!cfApiToken) {
+    console.error("متغیر CF_API_TOKEN یا CLOUDFLARE_API_TOKEN تنظیم نشده — اجرا متوقف شد.");
+    process.exit(1);
+  }
+  const cfAccountId = process.env.CF_ACCOUNT_ID || process.env.CLOUDFLARE_ACCOUNT_ID;
+  if (!cfAccountId) {
+    console.error("متغیر CF_ACCOUNT_ID یا CLOUDFLARE_ACCOUNT_ID تنظیم نشده — اجرا متوقف شد.");
+    process.exit(1);
+  }
   const cfWorkerName = process.env.CF_WORKER_NAME || "drkhaste-academy";
 
   const adminHash = await hashPassword(adminPassword);
