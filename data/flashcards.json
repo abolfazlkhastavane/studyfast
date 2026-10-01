@@ -1,17 +1,5 @@
 [
   {
-    "id": "1790806752172",
-    "topic_id": "1790806515313",
-    "question": "تست",
-    "answer": "تست",
-    "repetition": 1,
-    "interval": 1,
-    "efactor": 2.36,
-    "next_review": "2026-10-01T22:47:44.719Z",
-    "created_at": "2026-09-30T22:19:12.172Z",
-    "last_reviewed": "2026-09-30T22:47:44.719Z"
-  },
-  {
     "id": "1790847310897",
     "topic_id": "1790846277240",
     "question": "شاخص پرل (Pearl Index) چیست؟",
