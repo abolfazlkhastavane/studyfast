@@ -66,6 +66,10 @@
     {
       "color": "hl-yellow",
       "text": "انسداد"
+    },
+    {
+      "color": "hl-yellow",
+      "text": "مزمن"
     }
   ]
 }
