@@ -58,6 +58,10 @@
     {
       "color": "hl-yellow",
       "text": "غیرقابل"
+    },
+    {
+      "color": "hl-yellow",
+      "text": "انسداد"
     }
   ]
 }
