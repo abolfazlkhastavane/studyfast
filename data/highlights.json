@@ -45,6 +45,10 @@
   "1791231819243": [
     {
       "color": "hl-yellow",
+      "text": "غیرقابل"
+    },
+    {
+      "color": "hl-yellow",
       "text": "الاستیک"
     },
     {
@@ -54,18 +58,6 @@
     {
       "color": "hl-yellow",
       "text": "غضروفی"
-    },
-    {
-      "color": "hl-yellow",
-      "text": "غیرقابل"
-    },
-    {
-      "color": "hl-yellow",
-      "text": "کشش"
-    },
-    {
-      "color": "hl-yellow",
-      "text": "انسداد"
     },
     {
       "color": "hl-yellow",
@@ -81,15 +73,27 @@
     },
     {
       "color": "hl-yellow",
-      "text": "افزایش"
+      "text": "CF"
     },
     {
       "color": "hl-yellow",
-      "text": "CF"
+      "text": "کشش"
+    },
+    {
+      "color": "hl-yellow",
+      "text": "انسداد"
+    },
+    {
+      "color": "hl-yellow",
+      "text": "افزایش"
     },
     {
       "color": "hl-pink",
       "text": "همیشه"
+    },
+    {
+      "color": "hl-yellow",
+      "text": "HRCT"
     }
   ]
 }
