@@ -70,6 +70,10 @@
     {
       "color": "hl-yellow",
       "text": "مزمن"
+    },
+    {
+      "color": "hl-yellow",
+      "text": "HRCT"
     }
   ]
 }
