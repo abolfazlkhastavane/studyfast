@@ -82,6 +82,10 @@
     {
       "color": "hl-yellow",
       "text": "افزایش"
+    },
+    {
+      "color": "hl-yellow",
+      "text": "CF"
     }
   ]
 }
