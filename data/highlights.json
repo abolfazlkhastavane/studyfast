@@ -86,6 +86,10 @@
     {
       "color": "hl-yellow",
       "text": "CF"
+    },
+    {
+      "color": "hl-pink",
+      "text": "همیشه"
     }
   ]
 }
